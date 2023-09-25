@@ -33,6 +33,10 @@ app.use((req, res, next) => {
         res.render('fruits/New')
     })
 
+     app.get('/vegetables/new', (req, res) => {
+        res.render('vegetables/New')
+    })
+
     //Delete Route
     //Update Route
 
@@ -50,6 +54,17 @@ app.use((req, res, next) => {
         console.log(fruits)
         // res.send('data received')
         res.redirect('/fruits') //send user back to main page
+    })
+
+    app.post('/vegetables', (req, res) => {
+        console.log(req.body)
+        if(req.body.readyToEat === 'on'){
+            req.body.readyToEat = true
+        }else{
+            req.body.readyToEat = false
+        }
+        vegetables.push(req.body)
+        res.redirect('/vegetables')
     })
 
     //Edit Route
