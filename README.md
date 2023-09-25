@@ -1,3 +1,3 @@
 ## About
 
-Practice creating Index and Show routes using Express JS and view engine
+Practice creating Index, New, Delete, Update, Create, Edit and Show routes using Node, Express and JSX view engine.

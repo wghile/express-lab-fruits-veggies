@@ -8,11 +8,11 @@ class Index extends React.Component {
             <div>
                 <h1>Fruits Index Page</h1>
                 <ul>
-                    {fruits.map((fruit, i) => {
+                    {fruits.map((fruit) => {
                         return(
                             <li>
                                 The {' '}
-                                <a href={`/fruits/${i}`}>
+                                <a href={`/fruits/${fruit._id}`}>
                                     {fruit.name}
                                 </a>{` `} is {fruit.color} <br></br>
                                 {fruit.readyToEat ? `It is ready to eat` : `It is NOT ready to eat`}
