@@ -11,18 +11,6 @@ class Index extends React.Component {
                     <a href="/fruits/new">Create a New Fruit</a>
                 </nav>
                 <ul>
-                    {/* {fruits.map((fruit) => {
-                        return(
-                            <li>
-                                The {' '}
-                                <a href={`/fruits/${fruit._id}`}>
-                                    {fruit.name}
-                                </a>{` `} is {fruit.color} <br></br>
-                                {fruit.readyToEat ? `It is ready to eat` : `It is NOT ready to eat`}
-                                <br />
-                            </li>
-                        )
-                    })} */}
                     {fruits.map((fruit,i) => {
                         return <li key={i}>
                             <a href={`/fruits/${fruit._id}`}>
