@@ -39,6 +39,7 @@ app.use((req, res, next) => {
     //View Body of Post Request --> IMPORTANT! for post requests need a middleware function to access data
         app.use(express.urlencoded({extended: false}))  //middleware function that parses incoming requests where content-type matches. creates body object containing parsed data as key-value pairs (if extended = false --> value can be string or array and if extended = true --> value can be any data type)
 app.use(methodOverride('_method'))
+app.use(express.static('public'))   //tells express to try to match requests with files in the directory called 'public'
 
 //Seed Route --> for testing (place above INDUCES)
 // app.get('/fruits/seed', async(req, res)=>{
